@@ -106,7 +106,7 @@ type ImageParams struct {
 
 // Image is the result of Generate.
 type Image struct {
-	// ImageURL is a temporary URL on animeapi.ai/cdn. Download the image if you need to keep it.
+	// ImageURL is a temporary URL of the form https://animeapi.ai/i/<id>.<ext>. Download the image if you need to keep it.
 	ImageURL string `json:"image_url"`
 	// EnhancedPrompt is what the model actually received.
 	EnhancedPrompt string `json:"enhanced_prompt"`
