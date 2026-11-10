@@ -24,7 +24,7 @@ import (
 )
 
 // Version is the version of this module.
-const Version = "0.1.0"
+const Version = "0.1.1"
 
 // DefaultBaseURL is where requests go unless Client.BaseURL is changed.
 const DefaultBaseURL = "https://animeapi.ai"
@@ -99,8 +99,9 @@ type ImageParams struct {
 	Orientation string `json:"orientation,omitempty"`
 	// Enhance (anime model only) rewrites the prompt into tags first. API default true.
 	Enhance *bool `json:"enhance,omitempty"`
-	// AllowNSFW (anime model only). API default true; send false for anything shown publicly.
-	AllowNSFW *bool `json:"allowNSFW,omitempty"`
+	// Deprecated: AllowNSFW is ignored by the API; adult output is not available.
+	// The field is kept so existing code compiles and is not sent.
+	AllowNSFW *bool `json:"-"`
 }
 
 // Image is the result of Generate.

@@ -38,12 +38,13 @@ img, err := client.Generate(ctx, animeapi.ImageParams{
 	Prompt:      "a knight in ornate armor on a cliff at sunrise",
 	Model:       animeapi.ModelAnime,   // ModelAnime | ModelUltra | ModelUltraMax
 	Orientation: animeapi.Landscape,    // Portrait (default) | Square | Landscape
-	AllowNSFW:   animeapi.Bool(false),  // anime model: API default is true; send false for anything shown publicly
 })
 
 // Image URLs are not permanent storage. Download what you want to keep:
 data, contentType, err := client.Download(ctx, img.ImageURL)
 ```
+
+AnimeAPI does not generate adult content. Explicit prompts are refused and not charged.
 
 ## Video
 
