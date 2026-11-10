@@ -24,7 +24,7 @@ import (
 )
 
 // Version is the version of this module.
-const Version = "0.1.1"
+const Version = "0.1.2"
 
 // DefaultBaseURL is where requests go unless Client.BaseURL is changed.
 const DefaultBaseURL = "https://animeapi.ai"
